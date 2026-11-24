@@ -1,0 +1,64 @@
+@if (visivel()) {
+  <div style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; z-index: 1000;">
+    <div class="painel" style="background: #fff; border-radius: 8px; min-width: 420px; max-width: 90vw; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);">
+      <div class="painel-header" style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+        <h3 style="margin: 0;">Editar Permissão</h3>
+      </div>
+
+      <div class="painel-conteudo">
+        <form>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: bold;">Nome da Permissão</label>
+            <input
+              name="nome"
+              type="text"
+              [(ngModel)]="permissao.nome"
+              placeholder="Nome da permissão"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: bold;">Descrição</label>
+            <textarea
+              name="descricao"
+              [(ngModel)]="permissao.descricao"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; height: 80px;"></textarea>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: bold;">Módulo</label>
+            <input
+              name="modulo"
+              type="text"
+              [(ngModel)]="permissao.modulo"
+              placeholder="Módulo"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: bold;">Status</label>
+            <div style="display: flex; gap: 16px;">
+              <label style="display: flex; align-items: center; cursor: pointer;">
+                <input type="radio" name="ativo" [value]="true" [(ngModel)]="permissao.ativo" style="margin-right: 4px;">
+                <span>Ativo</span>
+              </label>
+              <label style="display: flex; align-items: center; cursor: pointer;">
+                <input type="radio" name="ativo" [value]="false" [(ngModel)]="permissao.ativo" style="margin-right: 4px;">
+                <span>Inativo</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px;">
+            <button type="button" (click)="onCancelar()" style="padding: 8px 16px; border: 1px solid #ccc; border-radius: 4px; background: none; cursor: pointer; font-size: 14px;">
+              Cancelar
+            </button>
+            <button type="button" (click)="salvar()" style="padding: 8px 16px; border: 1px solid var(--color-brand-01-base); border-radius: 4px; background: var(--color-brand-01-base); color: #fff; cursor: pointer; font-size: 14px;">
+              Salvar Alterações
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+}

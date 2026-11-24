@@ -1,0 +1,24 @@
+/* Estilo específico para listar */
+.po-table {
+  margin-bottom: 16px;
+}
+
+.po-table-action {
+  margin: 0 4px;
+}
+
+.po-table-cell {
+  vertical-align: middle;
+}
+
+.po-table-row {
+  transition: background-color 0.2s;
+}
+
+.po-table-row:hover {
+  background-color: var(--color-neutral-light-05);
+}
+
+.po-container-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,13 @@
+{
+  "name": "piacentini",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm --prefix api run start:dev\" \"npm --prefix web start\"",
+    "build": "npm --prefix api run build && npm --prefix web run build",
+    "api": "npm --prefix api run start:dev",
+    "web": "npm --prefix web start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

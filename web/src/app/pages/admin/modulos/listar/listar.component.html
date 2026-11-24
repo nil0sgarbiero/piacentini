@@ -1,0 +1,13 @@
+<po-table
+  [p-columns]="colunas"
+  [p-items]="modulosFiltrados()"
+  [p-actions]="acoesTabela"
+  p-actions-right
+  [p-loading]="carregando()"
+  [p-show-more-disabled]="true"
+  [p-hide-columns-manager]="true"
+  p-container="shadow"
+  p-striped>
+</po-table>
+
+<app-modulo-editar (salvo)="carregar()"></app-modulo-editar>

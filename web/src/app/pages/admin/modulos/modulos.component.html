@@ -1,0 +1,36 @@
+<div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+  <po-button
+    p-label="Incluir Módulo"
+    p-icon="an an-plus"
+    p-kind="primary"
+    (p-click)="incluir()">
+  </po-button>
+</div>
+
+<div class="po-row">
+  <po-input
+    class="po-md-4"
+    name="filtroNome"
+    [(ngModel)]="filtroNome"
+    p-label="Nome"
+    p-placeholder="Buscar por nome"
+    p-icon="an an-magnifying-glass"
+    p-clean>
+  </po-input>
+
+  <po-select
+    class="po-md-4"
+    name="filtroSituacao"
+    [ngModel]="filtroSituacao"
+    (ngModelChange)="filtroSituacao = $event"
+    p-label="Situação"
+    [p-options]="situacoes">
+  </po-select>
+</div>
+
+<app-modulo-listar
+  [filtroNome]="filtroNome"
+  [filtroSituacao]="filtroSituacao">
+</app-modulo-listar>
+
+<app-modulo-incluir (salvo)="recarregar()"></app-modulo-incluir>

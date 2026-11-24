@@ -1,0 +1,14 @@
+/* Estilo específico para a página de permissões */
+.painel-grid {
+  gap: 20px;
+}
+
+.modulo-icone {
+  font-size: 48px;
+  color: var(--color-brand-01-base);
+  margin-bottom: 16px;
+}
+
+.painel p:last-child {
+  margin-top: 4px;
+}

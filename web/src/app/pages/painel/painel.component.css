@@ -1,0 +1,70 @@
+/* Efeito de hover no card - aumenta a sensação de interação */
+.po-card:hover {
+  border-color: var(--color-brand-01-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Item do módulo - ícone em cima, label do meio, ação em baixo */
+.modulo-item {
+  padding: 20px;
+  border: 1px solid var(--color-neutral-light-20);
+  border-radius: 4px;
+  background: var(--color-neutral-light-05, #fff);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.modulo-item:hover {
+  border-color: var(--color-brand-01-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Ícone dentro do item */
+.modulo-icone {
+  font-size: 24px;
+  color: var(--color-brand-01-base);
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Label do módulo - centralizado */
+.modulo-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-neutral-dark-90);
+  width: 100%;
+  margin: 4px 0;
+  text-align: center;
+}
+
+/* Ação "Acessar" */
+.modulo-acao {
+  font-size: 12px;
+  color: var(--color-brand-01-base);
+  margin-top: 4px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Estado "sem módulos" */
+.painel-vazio {
+  color: var(--color-neutral-mid-60);
+  font-size: 13px;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* Container do grid - contém os cards flutuantes */
+.painel-grid {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}

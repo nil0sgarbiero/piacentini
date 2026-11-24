@@ -1,0 +1,14 @@
+<div class="painel">
+  <div class="painel-grid">
+    @for (sub of submodulos; track sub.key) {
+      <div class="modulo-item" (click)="abrir(sub)">
+        <span class="modulo-icone">
+          <i [class]="sub.icon"></i>
+        </span>
+        <p class="modulo-label">{{ sub.label }}</p>
+      </div>
+    } @empty {
+      <p class="painel-vazio">Nenhum submódulo cadastrado ainda.</p>
+    }
+  </div>
+</div>

@@ -1,0 +1,12 @@
+/* Estilo específico para listar usuários */
+.po-table {
+  margin-bottom: 16px;
+}
+
+.po-table-row {
+  transition: background-color 0.2s;
+}
+
+.po-table-row:hover {
+  background-color: var(--color-neutral-light-05);
+}

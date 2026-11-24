@@ -1,0 +1,24 @@
+<div class="po-wrapper">
+  <po-toolbar
+    [p-title]="tituloToolbar()"
+    [p-profile]="perfil()"
+    [p-profile-actions]="acoesPerfil"
+    [p-show-notification]="true"
+    [p-notification-number]="notificacoes()"
+    [p-notification-actions]="acoesNotificacao"
+    po-toolbar-column
+    p-logo="/logo-piacentini.png">
+  </po-toolbar>
+
+  <po-menu
+    p-logo-alt="Piacentini"
+    p-logo-link="/"
+    [p-menus]="menus()"
+    [p-collapsed]="menuColapsado()">
+  </po-menu>
+
+  <po-page-default
+    [p-breadcrumb]="breadcrumb()">
+    <router-outlet />
+  </po-page-default>
+</div>

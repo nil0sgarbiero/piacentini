@@ -1,0 +1,14 @@
+<div class="painel">
+  <div class="painel-grid">
+    @for (opcao of opcoesAdmin; track opcao.label) {
+      <div class="modulo-item" (click)="navigateTo(opcao.route)">
+        <span class="modulo-icone" style="font-size: 32px; margin-bottom: 8px;">
+          <i [class]="opcao.icon"></i>
+        </span>
+        <p style="font-size: 14px; color: var(--color-neutral-dark-90); text-align: center; margin: 4px 0;">{{ opcao.label }}</p>
+      </div>
+    } @empty {
+      <p style="padding: 20px; color: var(--color-neutral-mid-60); text-align: center;">Nenhuma opção disponível</p>
+    }
+  </div>
+</div>

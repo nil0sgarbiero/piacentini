@@ -1,0 +1,47 @@
+<div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+  <po-button
+    p-label="Incluir Usuário"
+    p-icon="an an-plus"
+    p-kind="primary"
+    (p-click)="incluir()">
+  </po-button>
+</div>
+
+<div class="po-row">
+  <po-input
+    class="po-md-3"
+    name="filtroNome"
+    [(ngModel)]="filtroNome"
+    p-label="Nome"
+    p-placeholder="Buscar por nome"
+    p-icon="an an-magnifying-glass"
+    p-clean>
+  </po-input>
+
+  <po-select
+    class="po-md-3"
+    name="filtroPerfil"
+    [ngModel]="filtroPerfil"
+    (ngModelChange)="filtroPerfil = $event"
+    p-label="Perfil"
+    [p-options]="perfis"
+    p-clean>
+  </po-select>
+
+  <po-select
+    class="po-md-3"
+    name="filtroSituacao"
+    [ngModel]="filtroSituacao"
+    (ngModelChange)="filtroSituacao = $event"
+    p-label="Situação"
+    [p-options]="situacoes">
+  </po-select>
+</div>
+
+<app-usuario-listar
+  [filtroNome]="filtroNome"
+  [filtroPerfil]="filtroPerfil"
+  [filtroSituacao]="filtroSituacao">
+</app-usuario-listar>
+
+<app-usuario-incluir (salvo)="recarregar()"></app-usuario-incluir>
